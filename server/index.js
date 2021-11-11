@@ -4,14 +4,14 @@ require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
 const client = Client({
-  // apiKey: process.env.LISTEN_API_KEY || null,
+  //apiKey: process.env.LISTEN_API_KEY || null,
   apiKey: null,
 });
 
 const app = express();
 
-app.get("/api", (req, res) => {
-  client.search({ q: 'barack obama', sort_by_date: 1, only_in: 'title,description' })
+app.get("/api/:q", (req, res) => {
+  client.search({ q: req.params.q, sort_by_date: 1, only_in: 'title,description' })
   .then((response) => {
     const data = response.data;
     res.json(data);
