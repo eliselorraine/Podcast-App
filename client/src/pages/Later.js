@@ -7,9 +7,8 @@ const Later = ({ list, setList }) => {
     return (
       list.map(obj => {
         return (
-          <div className="container">
-            <Podcast obj={obj} />
-            <Remove list={list} obj={obj} setList={setList} />
+          <div className="podcast_results-container">
+            <Podcast obj={obj} list={list} setList={setList} />
           </div>
         )
       })

@@ -1,0 +1,30 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__label {
+  font-size: 20px;
+  margin: 0px 0px 0px 15px;
+}
+
+.form__input {
+  margin: 0px 15px 0px 15px;
+  height: 30px;
+  width: 400px;
+  font-size: 15px;
+}
+
+.form__button--submit {
+  font-size: 15px;
+  height: 25px;
+  border-radius: 3px;
+  margin: 0px 15px 0px 15px;
+}
+

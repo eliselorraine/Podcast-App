@@ -1,21 +1,20 @@
 import React from 'react';
 import Podcast from './Podcast'
-import Add from './Add'
+import '../styles/Results.css';
 
 const Results = ({ data, list, setList }) => {
-  if(data.length !== 0) {
+  if (data.length !== 0) {
     return (
-      data.map((obj, index) => {
-        return ( 
-          <div >
-          <Podcast obj={obj} />
-          <Add obj={obj} index={index} list={list} setList={setList}/>
+      data.map((obj) => {
+        return (
+          <div className="podcast_results-container">
+            <Podcast obj={obj} list={list} setList={setList} />
           </div>
         )
       })
     )
-  } 
-  return <p>The data is empty</p>
+  }
+  return <p>Loading...</p>
 }
 
 export default Results;

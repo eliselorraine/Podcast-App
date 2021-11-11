@@ -8,9 +8,10 @@ import Later from './pages/Later'
 import Header from './components/Header'
 
 const App = () => {
+  let prevPodcasts = localStorage.getItem('list') ? JSON.parse(localStorage.getItem('list')) : [];
   const [data, setData] = useState([]);
   const [query, setQuery] = useState('');
-  const [list, setList] = useState([]);
+  const [list, setList] = useState([...prevPodcasts]);
 
   return (
     <>
@@ -27,20 +28,3 @@ const App = () => {
 }
 
 export default App;
-
-// if (data.length !== 0) {
-//   return (
-//     data.map((obj) => {
-//       return (
-//       <>
-//         <p>{obj.title_original}</p>
-//         <img alt="podcast thumbnail" src={obj.thumbnail}></img>
-//         <audio controls><source type="audio/mpeg" src={obj.audio}></source></audio>
-//       </>
-//       )
-//     })
-//   )
-// }
-// return (
-//   <p>Loading...</p>
-// )

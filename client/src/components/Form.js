@@ -1,10 +1,10 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
-
+import '../styles/Form.css'
 const Form = ({ query, setQuery, data, setData }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   const apiCall = () => {
     if (query) {
       fetch(`/api/${query}`)
@@ -39,7 +39,7 @@ const Form = ({ query, setQuery, data, setData }) => {
   return (
     <div className="form-container">
       <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="form__input">Search for podcasts</label>
+        <label className="form__label" htmlFor="form__input">Search for podcasts:</label>
         <input onChange={handleQuery}
           value={query} type="text"
           className="form__input"
