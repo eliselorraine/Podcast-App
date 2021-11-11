@@ -10,7 +10,6 @@ const Form = ({ page, setPage, query, setQuery, data, setData }) => {
       fetch(`/api/search/${query}/${page}`)
         .then((res) => res.json())
         .then((data) => setData(data.results))
-        .then(() => setPage(page + 10))
         .catch((err) => console.log(err.message));
     }
   }
