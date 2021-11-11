@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Podcast from './Podcast'
 import '../styles/Results.css';
 

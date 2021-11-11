@@ -20,8 +20,8 @@ const App = () => {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home query={query} setQuery={setQuery} data={data} setData={setData} />} exact />
-        <Route path="/search" element={<Search setPodcastId={setPodcastId} podcastId={podcastId} query={query} setQuery={setQuery} data={data} setData={setData} list={list} setList={setList}/>} />
+        <Route path="/" element={<Home page={page} setPage={setPage} query={query} setQuery={setQuery} data={data} setData={setData} />} exact />
+        <Route path="/search" element={<Search page={page} setPage={setPage} setPodcastId={setPodcastId} podcastId={podcastId} query={query} setQuery={setQuery} data={data} setData={setData} list={list} setList={setList}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/mylist" element={<Later list={list} setList={setList} />} />
         <Route path="/podcast" element={<Radio podcastId={podcastId} />} />

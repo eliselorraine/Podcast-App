@@ -1,13 +1,14 @@
 import React from 'react';
 import Form from '../components/Form'
 import Results from '../components/Results'
+import Pagination from '../components/Pagination'
 
-const Search = ({ podcastId, setPodcastId, query, setQuery, data, setData, list, setList }) => {
+const Search = ({ page, setPage, podcastId, setPodcastId, query, setQuery, data, setData, list, setList }) => {
   return (
     <>
-      <Form query={query} setQuery={setQuery} data={data} setData={setData} />
+      <Form page={page} setPage={setPage} query={query} setQuery={setQuery} data={data} setData={setData} />
       <Results data={data} list={list} setList={setList} setPodcastId={setPodcastId} podcastId={podcastId} />
-      <button>Next</button>
+      <Pagination data={data} setData={setData} query={query} page={page} setPage={setPage} />
     </>
   )
 }

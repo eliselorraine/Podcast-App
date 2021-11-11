@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
 import '../styles/Form.css'
-const Form = ({ query, setQuery, data, setData }) => {
-  const [page, setPage] = useState(0);
+const Form = ({ page, setPage, query, setQuery, data, setData }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -11,6 +10,7 @@ const Form = ({ query, setQuery, data, setData }) => {
       fetch(`/api/search/${query}/${page}`)
         .then((res) => res.json())
         .then((data) => setData(data.results))
+        .then(() => setPage(page + 10))
         .catch((err) => console.log(err.message));
     }
   }
