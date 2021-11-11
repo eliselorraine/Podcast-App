@@ -10,8 +10,8 @@ const client = Client({
 
 const app = express();
 
-app.get("/api/:q", (req, res) => {
-  client.search({ q: req.params.q, sort_by_date: 1, only_in: 'title,description' })
+app.get("/api/search/:q/:page", (req, res) => {
+  client.search({ q: req.params.q, sort_by_date: 1, only_in: 'title,description', language: 'English', offset: req.params.page })
   .then((response) => {
     const data = response.data;
     res.json(data);
@@ -20,8 +20,9 @@ app.get("/api/:q", (req, res) => {
   });
 });
 
-app.get("/api/suggested", (req, res) => {
-  client.fetchCuratedPodcastsLists({ page: 2 }).then((response) => {
+app.get("/api/podcasts/:id", (req, res) => {
+  client.fetchPodcastById({ id: req.params.id })
+  .then((response) => {
     res.json(response.data);
   }).catch((error) => {
     console.log(error);

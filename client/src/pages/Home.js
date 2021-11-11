@@ -6,7 +6,6 @@ const Home = ({ query, setQuery, data, setData }) => {
   return (
     <>
       <Form query={query} setQuery={setQuery} data={data} setData={setData} />
-      {/* <Curated /> */}
     </>
   )
 }
