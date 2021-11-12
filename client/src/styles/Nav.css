@@ -9,9 +9,6 @@
   }
 }
 
-.nav {
-}
-
 .nav-container {
   position: fixed;
   bottom: 0;
@@ -19,7 +16,7 @@
   flex-direction: row;
   align-items: center;
   width: 100%;
-  background-color: whitesmoke;
+  background-color: #AEB8FE;
 }
 
 .nav__menu {

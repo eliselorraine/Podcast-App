@@ -4,8 +4,8 @@ require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
 const client = Client({
-  apiKey: process.env.LISTEN_API_KEY || null,
-  // apiKey: null,
+  // apiKey: process.env.LISTEN_API_KEY || null,
+  apiKey: null,
 });
 
 const app = express();

@@ -11,7 +11,7 @@ const Later = ({ list, setList }) => {
     return (
       list.map(obj => {
         return (
-          <div key={randomNumber()} className="podcast_results-container">
+          <div key={randomNumber()} className="podcast_results-container list-container">
             <Podcast obj={obj} list={list} setList={setList} />
           </div>
         )

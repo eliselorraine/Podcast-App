@@ -38,12 +38,12 @@ const Form = ({ page, setPage, query, setQuery, data, setData }) => {
   return (
     <div className="form-container">
       <form className="form" onSubmit={handleSubmit}>
-        <label className="form__label" htmlFor="form__input">Search for podcast episodes:</label>
+        <label className="form__label" htmlFor="form__input">Search through podcasts:</label>
         <input onChange={handleQuery}
           value={query} type="text"
           className="form__input"
           id="form__input"
-          placeholder="Search by keyword...">
+          placeholder="Search by topic...">
         </input>
         <button type="submit"
           onClick={handleClick}
