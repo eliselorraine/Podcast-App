@@ -1,5 +1,6 @@
 import React from 'react';
 import Podcast from '../components/Podcast';
+import { Link } from 'react-router-dom';
 
 const Later = ({ list, setList }) => {
   const randomNumber = () => {
@@ -17,7 +18,12 @@ const Later = ({ list, setList }) => {
       })
     )
   }
-  return <p className="my-list__p__empty">Your list is empty!</p>
+  return (
+    <div className="my-list__p__empty">
+      <p className="my-list__p__empty">Your list is empty!</p>
+      <Link to="/" className="my-list__redirect">Search podcasts</Link>
+    </div>
+  )
 }
 
 export default Later;

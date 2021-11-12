@@ -25,7 +25,9 @@ const Podcast = ({ obj, list, setList, setPodcastId }) => {
             <Remove obj={obj} list={list} setList={setList} />
           </span>
           <div className="podcast__description">{parse(obj.description_original)}</div>
+          <div className="audio-container"> 
           <audio controls className="podcast__audio"><source type="audio/mpeg" src={obj.audio}></source></audio>
+          </div>
         </span>
       </div>
     )
@@ -39,7 +41,9 @@ const Podcast = ({ obj, list, setList, setPodcastId }) => {
             <h1 className="podcast__title">{obj.title}</h1>
           </span>
           <div className="podcast__description">{parse(obj.description)}</div>
+          <div className="audio-container"> 
           <audio controls className="podcast__audio"><source type="audio/mpeg" src={obj.audio}></source></audio>
+          </div>
         </span>
       </div>
     )
@@ -52,8 +56,10 @@ const Podcast = ({ obj, list, setList, setPodcastId }) => {
           <h1 className="podcast__title">{obj.title_original}</h1>
           <Add obj={obj} list={list} setList={setList} />
         </span>
-        <div className="podcast__description">{parse(obj.description_highlighted)}</div>
+        <div className="podcast__description">{parse(obj.description_original)}</div>
+        <div className="audio-container"> 
         <audio controls className="podcast__audio"><source type="audio/mpeg" src={obj.audio}></source></audio>
+        </div>
       </span>
     </div>
   )

@@ -8,7 +8,6 @@ const Results = ({ data, list, setList, setPodcastId }) => {
   }
   if (data.length !== 0) {
     return (
-      
         data.map((obj) => {
           return (
             <div key={randomNumber()} className="podcast_results-container">
@@ -16,11 +15,10 @@ const Results = ({ data, list, setList, setPodcastId }) => {
             </div>
           )
         })
-      
     )
   }
 
-  return <p>Loading...</p>
+  return <p className="results__p--loading">I'm sorry, it looks like there were no results. Please try a new search.</p>
 }
 
 export default Results;

@@ -16,8 +16,7 @@ const Add = ({ list, setList, obj }) => {
 
   return (
     <>
-      <button onClick={addToList} className="podcast__button--add">Add to my list</button>
-      <IoIosAddCircle onClick={addToList} className="podcast__button--icon podcast__button--icon--add"/>
+      <IoIosAddCircle onClick={addToList} className="podcast__button--icon podcast__button--add"/>
     </>
   )
 }

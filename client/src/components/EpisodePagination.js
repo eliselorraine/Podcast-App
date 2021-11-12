@@ -13,10 +13,9 @@ const EpisodePagination = ({ podcastId, nextPubDate, setNextPubDate, setPodcastE
     }
 
   return (
-    <>
-      <button>Previous</button>
-      <button onClick={() => olderEpisodes()}>Older episodes</button>
-    </>
+    <div className="episode-pagination-container">
+      <button className="older-episodes"onClick={() => olderEpisodes()}>See older episodes</button>
+    </div>
   )
 }
 

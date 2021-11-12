@@ -1,4 +1,6 @@
 import React from 'react';
+import { GrNext } from 'react-icons/gr'
+import { GrPrevious } from 'react-icons/gr'
 
 const Pagination = ({ page, setPage, setData, query }) => {
   const paginate = (p) => {
@@ -11,10 +13,10 @@ const Pagination = ({ page, setPage, setData, query }) => {
   }
 
   return (
-    <>
-      <button onClick={() => paginate(page - 10)}>Previous</button>
-      <button onClick={() => paginate(page + 10)}>Next</button>
-    </>
+    <div className="results-btn-container">
+      <button className="results__btn results__btn--prev" onClick={() => paginate(page - 10)}><GrPrevious /></button>
+      <button className="results__btn results__btn--next"onClick={() => paginate(page + 10)}><GrNext /></button>
+    </div>
   )
 }
 

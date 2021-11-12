@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Nav.css'
+import { BsSearch } from 'react-icons/bs';
+import { BsBookHalf } from 'react-icons/bs';
+import { MdListAlt } from 'react-icons/md';
 
 const Nav = () => {
   return (
     <div className="nav-container">
-      <nav>
+      <nav className="nav">
         <ul className="nav__menu">
-          <li><Link to="/" className="nav__link">Home</Link></li>
-          <li><Link to="/about" className="nav__link">About</Link></li>
-          <li><Link to="/mylist" className="nav__link">My Listening List</Link></li>
+          <li className="nav__li"><Link to="/" className="nav__link"><BsSearch /></Link></li>
+          <li className="nav__li"><Link to="/about" className="nav__link"><BsBookHalf /></Link></li>
+          <li className="nav__li"><Link to="/mylist" className="nav__link"><MdListAlt /></Link></li>
         </ul>
       </nav>
     </div>

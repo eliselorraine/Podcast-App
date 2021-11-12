@@ -38,7 +38,7 @@ const Form = ({ page, setPage, query, setQuery, data, setData }) => {
   return (
     <div className="form-container">
       <form className="form" onSubmit={handleSubmit}>
-        <label className="form__label" htmlFor="form__input">Search for podcasts:</label>
+        <label className="form__label" htmlFor="form__input">Search for podcast episodes:</label>
         <input onChange={handleQuery}
           value={query} type="text"
           className="form__input"
@@ -47,7 +47,7 @@ const Form = ({ page, setPage, query, setQuery, data, setData }) => {
         </input>
         <button type="submit"
           onClick={handleClick}
-          className="form__button--submit">Find podcasts</button>
+          className="form__button--submit">Find episodes</button>
       </form>
     </div>
   )

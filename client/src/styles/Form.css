@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -5,8 +7,11 @@
 
 .form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20%;
+  font-family: 'Barlow', sans-serif;
 }
 
 .form__label {
@@ -15,16 +20,18 @@
 }
 
 .form__input {
-  margin: 0px 15px 0px 15px;
+  margin: 10px 15px 10px 15px;
   height: 30px;
-  width: 400px;
+  width: 80%;
   font-size: 15px;
 }
 
 .form__button--submit {
+  font-family: 'Barlow', sans-serif;
   font-size: 15px;
   height: 25px;
   border-radius: 3px;
   margin: 0px 15px 0px 15px;
+  padding-bottom: 3px;
 }
 
