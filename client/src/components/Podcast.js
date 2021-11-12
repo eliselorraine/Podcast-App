@@ -21,25 +21,24 @@ const Podcast = ({ obj, list, setList, setPodcastId }) => {
         <img onClick={goToPodcast} alt="podcast thumbnail" src={obj.thumbnail}></img>
         <span className="podcast__audio-description">
           <span className="podcast__title-button">
-          <h1 className="podcast__title">{obj.title_original}</h1>
-          <Remove obj={obj} list={list} setList={setList}/>
+            <h1 className="podcast__title">{obj.title_original}</h1>
+            <Remove obj={obj} list={list} setList={setList} />
           </span>
-          <p className="podcast__description">{parse(obj.description_original)}</p>
+          <div className="podcast__description">{parse(obj.description_original)}</div>
           <audio controls className="podcast__audio"><source type="audio/mpeg" src={obj.audio}></source></audio>
         </span>
       </div>
     )
-  } 
-  
+  }
+
   if (location.pathname === '/podcast') {
     return (
       <div className="podcast-container">
         <span className="podcast__audio-description">
           <span className="podcast__title-button">
-          <h1 className="podcast__title">{obj.title}</h1>
-          <Add obj={obj} list={list} setList={setList}/>
+            <h1 className="podcast__title">{obj.title}</h1>
           </span>
-          <p className="podcast__description">{parse(obj.description)}</p>
+          <div className="podcast__description">{parse(obj.description)}</div>
           <audio controls className="podcast__audio"><source type="audio/mpeg" src={obj.audio}></source></audio>
         </span>
       </div>
@@ -50,10 +49,10 @@ const Podcast = ({ obj, list, setList, setPodcastId }) => {
       <img onClick={goToPodcast} alt="podcast thumbnail" src={obj.thumbnail}></img>
       <span className="podcast__audio-description">
         <span className="podcast__title-button">
-        <h1 className="podcast__title">{obj.title_original}</h1>
-        <Add obj={obj} list={list} setList={setList}/>
+          <h1 className="podcast__title">{obj.title_original}</h1>
+          <Add obj={obj} list={list} setList={setList} />
         </span>
-        <p className="podcast__description">{parse(obj.description_highlighted)}</p>
+        <div className="podcast__description">{parse(obj.description_highlighted)}</div>
         <audio controls className="podcast__audio"><source type="audio/mpeg" src={obj.audio}></source></audio>
       </span>
     </div>

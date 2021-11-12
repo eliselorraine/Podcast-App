@@ -1,4 +1,3 @@
-// import './App.css';
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home'
@@ -24,7 +23,7 @@ const App = () => {
         <Route path="/search" element={<Search page={page} setPage={setPage} setPodcastId={setPodcastId} podcastId={podcastId} query={query} setQuery={setQuery} data={data} setData={setData} list={list} setList={setList}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/mylist" element={<Later list={list} setList={setList} />} />
-        <Route path="/podcast" element={<Radio podcastId={podcastId} />} />
+        <Route path="/podcast" element={<Radio list={list} setList={setList} podcastId={podcastId} />} />
       </Routes>
     </>
   )

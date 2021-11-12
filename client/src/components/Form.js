@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
 import '../styles/Form.css'
 const Form = ({ page, setPage, query, setQuery, data, setData }) => {
@@ -6,6 +6,7 @@ const Form = ({ page, setPage, query, setQuery, data, setData }) => {
   const location = useLocation();
 
   const apiCall = () => {
+    console.log('i am an api call in Form.js');
     if (query) {
       fetch(`/api/search/${query}/${page}`)
         .then((res) => res.json())
@@ -26,7 +27,6 @@ const Form = ({ page, setPage, query, setQuery, data, setData }) => {
   const handleClick = () => {
     if (query) {
       setQuery(query);
-      console.log(query);
     }
   }
 

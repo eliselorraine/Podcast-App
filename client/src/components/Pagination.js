@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Pagination = ({ page, setPage, data, setData, query, setQuery }) => {
+const Pagination = ({ page, setPage, setData, query }) => {
   const paginate = (p) => {
+    console.log('i am an api call in Paginate.js');
     fetch(`/api/search/${query}/${p}`)
       .then((res) => res.json())
       .then((data) => setData(data.results))

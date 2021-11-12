@@ -1,20 +1,23 @@
 import React from 'react';
-import Remove from '../components/Remove';
 import Podcast from '../components/Podcast';
 
 const Later = ({ list, setList }) => {
+  const randomNumber = () => {
+    return Math.floor(Math.random() * 1000000);
+  }
+
   if (list.length !== 0) {
     return (
       list.map(obj => {
         return (
-          <div className="podcast_results-container">
+          <div key={randomNumber()} className="podcast_results-container">
             <Podcast obj={obj} list={list} setList={setList} />
           </div>
         )
       })
     )
   }
-  return <p>Your list is empty</p>
+  return <p className="my-list__p__empty">Your list is empty!</p>
 }
 
 export default Later;

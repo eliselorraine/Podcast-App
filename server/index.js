@@ -4,8 +4,8 @@ require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
 const client = Client({
-  apiKey: process.env.LISTEN_API_KEY || null,
-  // apiKey: null,
+  // apiKey: process.env.LISTEN_API_KEY || null,
+  apiKey: null,
 });
 
 const app = express();
@@ -22,6 +22,15 @@ app.get("/api/search/:q/:page", (req, res) => {
 
 app.get("/api/podcasts/:id", (req, res) => {
   client.fetchPodcastById({ id: req.params.id })
+  .then((response) => {
+    res.json(response.data);
+  }).catch((error) => {
+    console.log(error);
+  });
+})
+
+app.get("/api/podcasts/:id/:date", (req, res) => {
+  client.fetchPodcastById({ id: req.params.id, next_episode_pub_date: req.params.date})
   .then((response) => {
     res.json(response.data);
   }).catch((error) => {
