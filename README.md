@@ -1,6 +1,6 @@
 # Podcast-App
 
-A podcast discovery app made in one day during Salt bootcamp's "hackday". 
+A full stack podcast discovery app made in one day during Salt bootcamp's "hackday". 
 
 Features: Search for keyword in the title of podcast episodes, add Podcast episode in a "For later listening" list, click on episode cover to see details about podcast, and listen to whole episodes in-app.
 
