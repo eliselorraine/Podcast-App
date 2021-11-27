@@ -3,7 +3,7 @@
 A podcast discovery app made in one day during Salt bootcamp's "hackday". 
 
 Features: 
-  Search for keyword in the title of podcast episodes
+  Search for keyword in the title of podcast episodes /n
   Add Podcast episode in a "For later listening" list
   Click on episode cover to see details about podcast
   Listen to whole episodes in-app
