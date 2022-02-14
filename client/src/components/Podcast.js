@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Podcast.css'
+// import '../styles/Podcast.css'
 import Add from './Add'
 import Remove from './Remove'
 import { useLocation, useNavigate } from 'react-router-dom'

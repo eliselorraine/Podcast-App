@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Podcast from '../components/Podcast';
 import parse from 'html-react-parser';
 import EpisodePagination from '../components/EpisodePagination';
-import '../styles/Radio.css'
+// import '../styles/Radio.css'
 const Radio = ({ podcastId, list, setList }) => {
   const [podcastEpisodes, setPodcastEpisodes] = useState([]);
   const [podcastTitle, setPodcastTitle] = useState('');

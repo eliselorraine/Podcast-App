@@ -1,12 +1,13 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
-import '../styles/Form.css'
+// import '../styles/Form.css'
+import '../stylesheets/SearchBar.css'
 const Form = ({ page, setPage, query, setQuery, data, setData }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const apiCall = () => {
-    console.log('i am an api call in Form.js');
+    // console.log('i am an api call in Form.js');
     if (query) {
       fetch(`/api/search/${query}/${page}`)
         .then((res) => res.json())

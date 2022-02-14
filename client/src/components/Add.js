@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Podcast.css';
+// import '../styles/Podcast.css';
 import { IoIosAddCircle } from 'react-icons/io';
 
 const Add = ({ list, setList, obj }) => {

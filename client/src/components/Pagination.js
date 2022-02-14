@@ -4,7 +4,7 @@ import { GrPrevious } from 'react-icons/gr'
 
 const Pagination = ({ page, setPage, setData, query }) => {
   const paginate = (p) => {
-    console.log('i am an api call in Paginate.js');
+    // console.log('i am an api call in Paginate.js');
     fetch(`/api/search/${query}/${p}`)
       .then((res) => res.json())
       .then((data) => setData(data.results))

@@ -1,6 +1,6 @@
 import React from 'react';
 import Podcast from './Podcast'
-import '../styles/Results.css';
+// import '../styles/Results.css';
 
 const Results = ({ data, list, setList, setPodcastId }) => {
   const randomNumber = () => {

@@ -1,0 +1,24 @@
+.header__container {
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Arima Madurai', cursive;
+    margin-top: 30vh;
+}
+
+.header__container--results {
+    font-family: 'Arima Madurai', cursive;
+    font-size: 25px;
+}
+
+.header__text-container {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 10px;
+}
