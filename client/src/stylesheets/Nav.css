@@ -1,0 +1,40 @@
+.nav-container {
+    font-family: 'Baloo 2', cursive;
+    background-color: lightslategray;
+    height: 60px;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid rgb(32, 32, 32);
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.nav__menu {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 15px 0px 0px;
+}
+
+.nav__li {
+    list-style: none;
+    margin-left: 25px;
+}
+
+.nav__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.nav__icon {
+    margin-right: 8px;
+}
+
+.nav__icon:hover, .nav__link:hover {
+    color: rgb(202, 199, 199);
+}
