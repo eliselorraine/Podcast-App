@@ -1,0 +1,34 @@
+.podcast-container {
+    /* display: flex; */
+    margin: 15px;
+}
+
+.podcast__title {
+    font-family: 'Arima Madurai', cursive;
+}
+
+.podcast__description {
+    font-family: 'Baloo 2', cursive;
+}
+
+.podcast_thumbnail {
+    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 3px;
+}
+
+.podcast__button--add {
+    color: green;
+    font-size: 30px;
+}
+
+.added {
+    background-color: red;
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

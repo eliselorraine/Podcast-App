@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700&family=Baloo+2&family=Gideon+Roman&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0 auto;
+  margin: 100px 0px 0px 0px;
+  z-index: -1;
 }
 
-html {
+/* html {
   width: 100vw;
-}
+} */

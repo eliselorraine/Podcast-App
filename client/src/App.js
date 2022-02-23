@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home'
-import Footer from './components/Footer'
+import Nav from './components/Nav'
 import About from './pages/About'
 import Search from './pages/Search'
 import Later from './pages/Later'
@@ -17,8 +17,9 @@ const App = () => {
   const [page, setPage] = useState(0);
 
   return (
-    <>
-      <Header />
+    <div className="app-containter">
+      <Nav />
+      <Header data={data} />
       <Routes>
         <Route path="/" element={<Home page={page} setPage={setPage} query={query} setQuery={setQuery} data={data} setData={setData} />} exact />
         <Route path="/search" element={<Search page={page} setPage={setPage} setPodcastId={setPodcastId} podcastId={podcastId} query={query} setQuery={setQuery} data={data} setData={setData} list={list} setList={setList} />} />
@@ -26,8 +27,7 @@ const App = () => {
         <Route path="/mylist" element={<Later list={list} setList={setList} />} />
         <Route path="/podcast" element={<Radio list={list} setList={setList} podcastId={podcastId} />} />
       </Routes>
-      <Footer />
-    </>
+    </div>
   )
 
 }

@@ -1,12 +1,18 @@
 import React from 'react';
-import '../styles/Header.css'
+// import '../styles/Header.css'
+import '../stylesheets/Header.css'
 import { GiFishingHook } from 'react-icons/gi'
 
-const Header = () => {
+const Header = ({ data }) => {
+  if(data.length !== 0) {
+
+  }
   return (
-    <div className="mobile__title-icon">
-      <GiFishingHook className="header__logo" />
-      <header className="header__title">Hook: The Podcast App</header>
+    <div className={data.length !== 0 ? "header__container--results" : "header__container"}>
+      <div className="header__text-container">
+        <GiFishingHook className="header__logo" />
+        <header className="header__title">Hook: the Podcast App</header>
+      </div>
     </div>
   )
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/About.css';
+import '../stylesheets/About.css';
 
 const About = () => {
   return (
     <div className="about-container">
-      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+      <p className="about-text">For me, podcasts have always been a somewhat undiscovered media. I know there are many I would probably enjoy, yet I have little patience to explore or find one I am curious about. This app is for anybody who feels the same. Search through the entire Listen Notes Podcast collection to find episodes or podcast channels you are interested in. Listen right away or save the podcasts for later listening. </p>
     </div>
   )
 }

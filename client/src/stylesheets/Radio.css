@@ -1,0 +1,32 @@
+.radio-container {
+    /* margin-bottom: 30px; */
+    display: flex;
+}
+
+.main-podcast-title {
+    margin: 50px 50px 0px 50px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.main-podcast-description {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 20px;
+    margin: 16px;
+    min-height: 300px;
+    
+}
+
+.main-podcast-thumbnail {
+    margin: 0px 20px 0px 20px;
+}
+
+.podcast__title {
+    font-size: 18px;
+    width: 100%;
+}
+
+.radio_podcast-container {
+    margin: 0px 100px 0px 100px;
+}
+
+
