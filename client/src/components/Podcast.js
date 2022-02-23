@@ -37,31 +37,31 @@ const Podcast = ({ obj, list, setList, setPodcastId }) => {
 
   if (location.pathname === '/podcast') {
     return (
-      <div className="podcast-container">
+      <div className="podcast-container radio_podcast-container">
         <span className="podcast__audio-description">
-          <span className="podcast__title-button">
-            <h1 className="podcast__title">{obj.title}</h1>
-          </span>
-          <div className="podcast__description">{parse(obj.description)}</div>
+          {/* <span className="podcast__title-button"> */}
+          <h1 className="podcast__title">{obj.title}</h1>
+          {/* </span> */}
           <div className="audio-container">
             <audio controls className="podcast__audio"><source type="audio/mpeg" src={obj.audio}></source></audio>
           </div>
+          <div className="podcast__description">{parse(obj.description)}</div>
         </span>
       </div>
     )
   }
   return (
     <div className="podcast-container">
-      <img onClick={goToPodcast} alt="podcast thumbnail" src={obj.thumbnail}></img>
+      <img onClick={goToPodcast} className="podcast_thumbnail" alt="podcast thumbnail" src={obj.thumbnail}></img>
       <span className="podcast__audio-description">
         <span className="podcast__title-button">
           <h1 className="podcast__title">{obj.title_original}</h1>
-          <Add obj={obj} list={list} setList={setList} />
+          <div className="audio-container">
+            <audio controls className="podcast__audio"><source type="audio/mpeg" src={obj.audio}></source></audio>
+            <Add obj={obj} list={list} setList={setList} />
+          </div>
         </span>
         <div className="podcast__description">{parse(obj.description_original)}</div>
-        <div className="audio-container">
-          <audio controls className="podcast__audio"><source type="audio/mpeg" src={obj.audio}></source></audio>
-        </div>
       </span>
     </div>
   )

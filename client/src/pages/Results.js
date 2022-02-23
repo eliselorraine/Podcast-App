@@ -1,6 +1,6 @@
 import React from 'react';
-import Podcast from './Podcast'
-// import '../styles/Results.css';
+import Podcast from '../components/Podcast'
+import '../stylesheets/Results.css';
 
 const Results = ({ data, list, setList, setPodcastId }) => {
   const randomNumber = () => {
@@ -8,13 +8,13 @@ const Results = ({ data, list, setList, setPodcastId }) => {
   }
   if (data.length !== 0) {
     return (
-        data.map((obj) => {
-          return (
+      data.map((obj) => {
+        return (
             <div key={randomNumber()} className="podcast_results-container">
               <Podcast obj={obj} list={list} setList={setList} setPodcastId={setPodcastId} />
             </div>
-          )
-        })
+        )
+      })
     )
   }
 

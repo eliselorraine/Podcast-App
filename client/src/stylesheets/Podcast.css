@@ -1,16 +1,6 @@
 .podcast-container {
-    display: flex;
+    /* display: flex; */
     margin: 15px;
-}
-
-.podcast__audio-description {
-    margin: 15px;
-    background-color: red;
-    /* float: left; */
-}
-
-.podcast__description {
-    /* float: left; */
 }
 
 .podcast__title {
@@ -21,8 +11,24 @@
     font-family: 'Baloo 2', cursive;
 }
 
-img {
+.podcast_thumbnail {
     border-radius: 5px;
-    object-fit: contain;
     float: left;
+    margin-right: 20px;
+    margin-bottom: 3px;
+}
+
+.podcast__button--add {
+    color: green;
+    font-size: 30px;
+}
+
+.added {
+    background-color: red;
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }

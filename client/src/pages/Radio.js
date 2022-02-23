@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Podcast from '../components/Podcast';
 import parse from 'html-react-parser';
 import EpisodePagination from '../components/EpisodePagination';
-// import '../styles/Radio.css'
+import '../stylesheets/Radio.css'
 const Radio = ({ podcastId, list, setList }) => {
   const [podcastEpisodes, setPodcastEpisodes] = useState([]);
   const [podcastTitle, setPodcastTitle] = useState('');
@@ -27,9 +27,9 @@ const Radio = ({ podcastId, list, setList }) => {
 
   return (
     <>
-      <div>
+      <div classname="radio-container">
+        <img className="main-podcast-thumbnail" alt="podcast thumbnail" src={podcastCover}></img>
         <h1 className="main-podcast-title">{podcastTitle}</h1>
-        <img alt="podcast thumbnail" src={podcastCover}></img>
         <p className="main-podcast-description">{parse(podcastDescription)}</p>
       </div>
       <EpisodePagination podcastId={podcastId} nextPubDate={nextPubDate} setNextPubDate={setNextPubDate} setPodcastEpisodes={setPodcastEpisodes}/>

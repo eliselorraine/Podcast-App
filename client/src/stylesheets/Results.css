@@ -1,0 +1,12 @@
+.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.podcast_results-container {
+    max-width: 900px;
+    display: flex;
+    margin-bottom: 15px;
+}
