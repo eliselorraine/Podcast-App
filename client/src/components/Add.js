@@ -1,28 +1,43 @@
 import React, { useEffect, useState } from 'react';
 // import '../styles/Podcast.css';
 import { IoIosAddCircle } from 'react-icons/io';
+import { IoIosRemoveCircle } from 'react-icons/io'
 
-const Add = ({ list, setList, obj }) => {
+const Add = ({ list, setList, obj }) => { 
+  const [scrollPos, setScrollPos] = useState(window.scrollY);
   const alreadyExists = list.find(element => element.id === obj.id);
-  // const [alreadyAdded, setAdded] = useState(alreadyExists ? true : false);
-  const added = "podcast__button--add " + (alreadyExists ? "added" : ""); 
-  
-  useEffect(() => {
-    console.log('test')
-  }, [list])
-
+  const added = "podcast_button-add " + (alreadyExists ? "added" : "");
 
   const addToList = () => {
-    console.log(alreadyExists, obj)
-    if (alreadyExists !== undefined) return;
-    list.push(obj);
-    setList(list);
-    localStorage.setItem('list', JSON.stringify(list));
+    const justAdded = list.find(element => element.id === obj.id);
+    const positionY = window.scrollY;
+    if (justAdded) return;
+    const updatedList = [...list];
+    updatedList.push(obj);
+    setList(updatedList)
+    localStorage.setItem('list', JSON.stringify(updatedList));
+    window.scroll(0, positionY);
+  }
+
+  const removeFromList = () => {
+    const updatedList = [...list]
+    const indexToRemove = updatedList.indexOf(obj);
+    updatedList.splice(indexToRemove, 1);
+    setList(updatedList);
+    localStorage.setItem('list', JSON.stringify(updatedList));
+  }
+
+  if (!alreadyExists) {
+    return (
+      <>
+        <IoIosAddCircle onClick={addToList} className={added} />
+      </>
+    )
   }
 
   return (
     <>
-      <IoIosAddCircle onClick={addToList} className={added}/>
+      <IoIosRemoveCircle onClick={removeFromList} className="podcast_button-remove" />
     </>
   )
 }

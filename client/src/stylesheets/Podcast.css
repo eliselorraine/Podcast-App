@@ -18,13 +18,23 @@
     margin-bottom: 3px;
 }
 
-.podcast__button--add {
+.podcast_button-add {
     color: green;
     font-size: 30px;
 }
 
-.added {
-    background-color: red;
+.podcast_button-add:hover {
+    color: rgb(0, 94, 0);
+}
+
+
+.podcast_button-remove {
+    color: red;
+    font-size: 30px;
+}
+
+.podcast_button-remove:hover {
+    color: rgb(199, 0, 0);
 }
 
 .audio-container {

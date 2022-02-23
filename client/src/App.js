@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home'
 import Nav from './components/Nav'
@@ -15,6 +15,10 @@ const App = () => {
   const [list, setList] = useState([...prevPodcasts]);
   const [podcastId, setPodcastId] = useState('');
   const [page, setPage] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="app-containter">

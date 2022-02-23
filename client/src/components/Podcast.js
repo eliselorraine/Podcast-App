@@ -18,20 +18,18 @@ const Podcast = ({ obj, list, setList, setPodcastId }) => {
   if (location.pathname === '/mylist') {
     return (
       <div className="podcast-container">
-        {/* <div className="podcast__thumbnail"> */}
-        {/* </div> */}
-        <div className="podcast__audio-description">
-          <span className="podcast__title-button">
-            <h1 className="podcast__title">{obj.title_original}</h1>
-            <Remove obj={obj} list={list} setList={setList} />
-          </span>
-          <div className="podcast__description">{parse(obj.description_original)}</div>
-          <img onClick={goToPodcast} className="podcast__thumbnail" alt="podcast thumbnail" src={obj.thumbnail}></img>
+      <img onClick={goToPodcast} className="podcast_thumbnail" alt="podcast thumbnail" src={obj.thumbnail}></img>
+      <span className="podcast__audio-description">
+        <span className="podcast__title-button">
+          <h1 className="podcast__title">{obj.title_original}</h1>
           <div className="audio-container">
             <audio controls className="podcast__audio"><source type="audio/mpeg" src={obj.audio}></source></audio>
+            <Remove obj={obj} list={list} setList={setList} />
           </div>
-        </div>
-      </div>
+        </span>
+        <div className="podcast__description">{parse(obj.description_original)}</div>
+      </span>
+    </div>
     )
   }
 
