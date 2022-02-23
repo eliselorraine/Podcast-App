@@ -5,16 +5,12 @@ import { IoIosAddCircle } from 'react-icons/io';
 const Add = ({ list, setList, obj }) => {
   const alreadyExists = list.find(element => element.id === obj.id);
   // const [alreadyAdded, setAdded] = useState(alreadyExists ? true : false);
-  
-  // useEffect(() => {
-  //   if(alreadyExists) {
-  //     setAdded(true)
-  //   }
-  //   console.log(alreadyExists)
-  //   console.log(list)
-  // }, []);
-
   const added = "podcast__button--add " + (alreadyExists ? "added" : ""); 
+  
+  useEffect(() => {
+    console.log('test')
+  }, [list])
+
 
   const addToList = () => {
     console.log(alreadyExists, obj)
