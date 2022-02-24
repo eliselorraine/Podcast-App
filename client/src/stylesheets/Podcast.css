@@ -23,9 +23,6 @@
     font-size: 30px;
 }
 
-.podcast_button-add:hover {
-    color: rgb(0, 94, 0);
-}
 
 
 .podcast_button-remove {
@@ -33,8 +30,30 @@
     font-size: 30px;
 }
 
+@keyframes remove {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(-90deg)}
+}
+
+@keyframes remove-active {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(-180deg)}
+}
+
+.podcast_button-add:hover {
+    color: rgb(0, 94, 0);
+    animation-name: remove;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;  
+}
+
+
 .podcast_button-remove:hover {
     color: rgb(199, 0, 0);
+    animation-name: remove;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;  
+    transition: ease-in-out;
 }
 
 .audio-container {

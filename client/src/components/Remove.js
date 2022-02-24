@@ -12,7 +12,7 @@ const Remove = ({ list, setList, obj }) => {
 
   return (
     <>
-      <IoIosRemoveCircle onClick={removeFromList} className="podcast__button--icon podcast__button--icon--remove" />
+      <IoIosRemoveCircle onClick={removeFromList} className="podcast_button-remove" />
     </>
   )
 }

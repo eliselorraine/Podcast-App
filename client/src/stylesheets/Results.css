@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .podcast_results-container {
@@ -10,3 +11,29 @@
     display: flex;
     margin-bottom: 15px;
 }
+
+.my-list_empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.my-list_empty-text {
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+}
+
+.my-list__redirect {
+    text-decoration: none;
+    color: rgb(90, 89, 89);
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+}
+
+.my-list__redirect:hover {
+    color: lightslategray;
+}
+
