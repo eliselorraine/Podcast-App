@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 // import '../styles/Podcast.css';
 import { IoIosAddCircle } from 'react-icons/io';
 import { IoIosRemoveCircle } from 'react-icons/io'
 
 const Add = ({ list, setList, obj }) => { 
-  const [scrollPos, setScrollPos] = useState(window.scrollY);
   const alreadyExists = list.find(element => element.id === obj.id);
   const added = "podcast_button-add " + (alreadyExists ? "added" : "");
 

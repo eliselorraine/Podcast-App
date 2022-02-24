@@ -37,3 +37,25 @@
     color: lightslategray;
 }
 
+.results-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.results__btn {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border-style: none;
+    height: 25px;
+    font-family: 'Baloo 2', cursive;
+    box-shadow: 2px 1px 5px rgb(182, 182, 182);
+}
+
+.results__btn:hover {
+    background-color: rgb(210, 210, 211);
+}
+
+

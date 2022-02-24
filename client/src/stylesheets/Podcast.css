@@ -1,10 +1,13 @@
 .podcast-container {
-    /* display: flex; */
     margin: 15px;
 }
 
 .podcast__title {
     font-family: 'Arima Madurai', cursive;
+}
+
+.list_podcast__audio {
+    width: 70%;
 }
 
 .podcast__description {
@@ -22,8 +25,6 @@
     color: green;
     font-size: 30px;
 }
-
-
 
 .podcast_button-remove {
     color: red;
@@ -60,4 +61,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.podcast__audio {
+    width: 70%;
 }

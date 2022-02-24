@@ -1,6 +1,7 @@
 import React from 'react';
 import { GrNext } from 'react-icons/gr'
 import { GrPrevious } from 'react-icons/gr'
+import '../stylesheets/Results.css'
 
 const Pagination = ({ page, setPage, setData, query }) => {
   const paginate = (p) => {

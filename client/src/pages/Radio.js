@@ -10,7 +10,7 @@ const Radio = ({ podcastId, list, setList }) => {
   const [podcastDescription, setPodcastDescription] = useState('');
   const [nextPubDate, setNextPubDate] = useState('');
 
-  
+
   useEffect(() => {
     console.log('i am an api call in Radio.js');
     fetch(`/api/podcasts/${podcastId}`)
@@ -26,17 +26,19 @@ const Radio = ({ podcastId, list, setList }) => {
   }, []);
 
   return (
-    <>
-      <div classname="radio-container">
+    <div className="width-container">
+      <div className="radio-container">
         <img className="main-podcast-thumbnail" alt="podcast thumbnail" src={podcastCover}></img>
         <h1 className="main-podcast-title">{podcastTitle}</h1>
         <p className="main-podcast-description">{parse(podcastDescription)}</p>
       </div>
-      <EpisodePagination podcastId={podcastId} nextPubDate={nextPubDate} setNextPubDate={setNextPubDate} setPodcastEpisodes={setPodcastEpisodes}/>
-      {podcastEpisodes.map(obj => {
-        return <Podcast key={obj.id} obj={obj} list={list} setList={setList} />
-      })}
-    </>
+      <div className="episodes-container">
+        <EpisodePagination podcastId={podcastId} nextPubDate={nextPubDate} setNextPubDate={setNextPubDate} setPodcastEpisodes={setPodcastEpisodes} />
+        {podcastEpisodes.map(obj => {
+          return <Podcast key={obj.id} obj={obj} list={list} setList={setList} />
+        })}
+      </div>
+    </div>
   )
 
 }
